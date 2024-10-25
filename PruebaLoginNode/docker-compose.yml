@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  nginx-gateway:
+    build:
+      context: ./nginx-gateway
+    networks:
+      - api_gateway_network
+    ports:
+      - "4004:4004"
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+  user-service:
+    build:
+      context: ./user-service
+    networks:
+      - api_gateway_network
+    ports:
+      - "4001:4001"
+    depends_on:
+      - product-service
+      - order-service
+
+  product-service:
+    build:
+      context: ./product-service
+    networks:
+      - api_gateway_network
+    ports:
+      - "4002:4002"
+
+  order-service:
+    build:
+      context: ./order-service
+    networks:
+      - api_gateway_network
+    ports:
+      - "4003:4003"
+
+networks:
+  # Defines a custom network named api_gateway_network.
+  api_gateway_network:
+      
+ 
+

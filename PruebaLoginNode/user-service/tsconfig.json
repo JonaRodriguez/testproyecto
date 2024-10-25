@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "./src",         // Carpeta donde están tus archivos TypeScript
+    "outDir": "./dist",         // Carpeta donde se colocará el código compilado
+    "strict": true,             // Activar estrictas comprobaciones de tipos
+    "esModuleInterop": true,    // Para soportar mejor CommonJS/ESM
+    "skipLibCheck": true        // Omitir comprobaciones de tipos en archivos de dependencias
+  },
+  "include": ["src/**/*"],      // Incluir todos los archivos .ts en la carpeta src
+  "exclude": ["node_modules", "dist"]  // Excluir node_modules y dist
+}

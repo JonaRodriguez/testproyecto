@@ -1,0 +1,20 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "Microservicio para la gestión de usuarios",
+  "main": "dist/userService.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/userService.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^16.11.9",
+    "typescript": "^4.5.2"
+  }
+}
